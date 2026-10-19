@@ -1,0 +1,53 @@
+{
+  "name": "dsh-annotation-cards",
+  "version": "0.4.0",
+  "description": "Codex-style selection annotations for DeepSeek Harness: popover comment cards, blue reference badges, a compact N-annotations chip above the composer, and card rendering of sent annotations.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaige1986kg/dsh-annotation-cards.git"
+  },
+  "homepage": "https://github.com/kaige1986kg/dsh-annotation-cards",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "annotations",
+    "codex"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    },
+    "marketplace": {
+      "profiles": ["web", "desktop"],
+      "requiresBuildApproval": false,
+      "requiresRestart": false,
+      "manualSteps": false
+    }
+  }
+}

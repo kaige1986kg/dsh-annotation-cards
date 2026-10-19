@@ -1,0 +1,9 @@
+# The bundle layer for dsh-annotation-cards.
+#
+# The inserted Loader row mounts this package's host half (lib/index.js). The
+# row `name` MUST equal the npm package name so the Loader can resolve it. The
+# browser half is discovered separately from the package's `dsh.client`
+# declaration and its exports["./client"] bundle.
+- insert:
+    - id: annotation-cards
+      name: dsh-annotation-cards
